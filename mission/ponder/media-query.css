@@ -1,0 +1,60 @@
+/* bing bong bing bong bing bong bing bong bing bong */
+/* display:none; will be used in the homework. */
+/* So is display:block; which brings it back. */
+/* these would be used in media queries in which certain things show on laptop and are hidden on mobile. */
+
+/* imported font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* cancel out default browser values */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* declare font on whole body */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  header, main, footer {
+    max-width: 1000px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #e6f2ff;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  
+  section {
+    padding: 1rem;
+    background-color: #fff;
+  }
+
+
+  /* media queries for screen sizes. */
+@media (min-width:500px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    header {
+        color: white;
+        background-color: black;
+    }
+}
+@media (min-width:750px) {
+    main {
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+@media (min-width:1000px) {
+    main {
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+}
