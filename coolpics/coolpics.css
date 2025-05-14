@@ -41,6 +41,17 @@ button {
     all:unset;
     color: var(--text-light);
     font-size: 20px;
+    margin-bottom: 4px;
+}
+
+nav {
+    color: var(--text-light);
+}
+
+/* navigation java class*/
+.hidden {
+    display: none;
+
 }
 
 /* main */
@@ -84,10 +95,6 @@ footer {
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
-    a:link,
-    a:visited {
-        display: none;
-    }
 }
 @media (min-width: 850px) {
     .gallery {
@@ -104,5 +111,12 @@ footer {
     }
     button {
         display: none;
+    }
+    a:link,
+    a:visited {
+        display: inline-block;
+    }
+    #nav {
+        display: block;
     }
 }
