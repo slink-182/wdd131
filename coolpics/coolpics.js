@@ -1,8 +1,7 @@
-const button = document.querySelector('button');
-const nav = document.getElementById('nav');
+const menuButton = document.querySelector('#menu-button');
+const nav = document.querySelector('#nav');
 
-button.addEventListener('click', () => {
+menuButton.addEventListener('click', () => {
   nav.classList.toggle('hide');
 });
-
 
