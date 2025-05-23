@@ -53,8 +53,9 @@ nav a{
     text-align: right;
     
 }
-.column-left h3, .column-left h4{
+.column-left h2, .column-left h3{
     margin-bottom: 4px;
+    
 }
 
 /* column center */
@@ -62,12 +63,12 @@ nav a{
     /* background-color: purple; */
     display: flex;
     flex-direction: column;
+    
 }
 .column-center h3{
     margin-bottom: 6px;
 }
 #col-center-img{
-    background-color: blue;
     display: block;
     height: 430px;
     width:300px;
