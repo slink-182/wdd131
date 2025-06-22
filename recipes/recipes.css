@@ -1,0 +1,88 @@
+/* set mobile view first */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: #4f4f4f; */
+}
+img {
+	max-width: 100%;
+    
+}
+
+/* header */
+header{
+    /* border-bottom: 2px solid black; */
+    margin-bottom: 20px;
+    padding:12px 0;
+}
+
+/* this is the image in the header */
+header img{
+    height: 80px;
+}
+
+header .title{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 64px 0;
+}
+header .search{
+    border: 2px solid black;
+    padding: 4px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.search img{
+    height: 32px;
+    display: block;
+    margin-left: auto;
+
+}
+
+/* set up images within the main element */
+.post img{
+    display: block;
+    margin: 0 auto;
+}
+.post button{
+    border: 2px solid black;
+    padding: 4px;
+    margin-top: 8px;
+    font-size: 24px;
+}
+.post h2{
+    color: blue;
+}
+.post{
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 24px;
+    max-width: 90%;
+    padding-bottom: 40px;
+}
+
+
+/* footer section */
+footer{
+    margin-top: 100px;
+    height: 200px;
+    text-align: center;
+    
+}
+footer a{
+    text-decoration: none;
+    color: blue;
+}
+
+/* set up social media icon size different from default image sizing */
+.social img{
+    max-width: 64px;
+    
+}
+.social{
+    text-align: center;
+    max-width: 100%;
+    margin: 28px;
+}
