@@ -1,88 +1,157 @@
-/* set mobile view first */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* background-color: #4f4f4f; */
+/* Reset and basics stay the same */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 img {
-	max-width: 100%;
-    
+  max-width: 100%;
+  display: block;
 }
 
-/* header */
-header{
-    /* border-bottom: 2px solid black; */
-    margin-bottom: 20px;
-    padding:12px 0;
+/* Header styles — keep these as is */
+header {
+  margin-bottom: 20px;
+  padding: 12px 0;
 }
 
-/* this is the image in the header */
-header img{
-    height: 80px;
+header img {
+  height: 80px;
 }
 
-header .title{
+header .title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 64px 0;
+}
+
+header .search {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin: 64px 0;
-}
-header .search{
     border: 2px solid black;
     padding: 4px;
     max-width: 90%;
     margin: 0 auto;
 }
-.search img{
+#search-input{
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 2%;
+    background-color: #ebebeb;
+}
+
+
+.search img {
     height: 32px;
-    display: block;
-    margin-left: auto;
-
+    margin-left: 4px;
 }
 
-/* set up images within the main element */
-.post img{
-    display: block;
-    margin: 0 auto;
-}
-.post button{
-    border: 2px solid black;
-    padding: 4px;
-    margin-top: 8px;
-    font-size: 24px;
-}
-.post h2{
-    color: blue;
-}
-.post{
-    margin: 0 auto;
-    border: 2px solid black;
-    padding: 24px;
-    max-width: 90%;
-    padding-bottom: 40px;
+/* Main content styles: update for new HTML structure */
+
+/* Style the recipe container similarly to .post */
+.recipe {
+  margin: 0 auto 40px auto;
+  border: 2px solid black;
+  padding: 24px;
+  max-width: 90%;
+  text-align: center;
+  background-color: #fff; /* Optional */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-
-/* footer section */
-footer{
-    margin-top: 100px;
-    height: 200px;
-    text-align: center;
-    
-}
-footer a{
-    text-decoration: none;
-    color: blue;
+/* Style the image inside recipe (like .post img) */
+.recipe img {
+  margin: 0 auto 16px auto;
+  /* max-height: 250px; */
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
 }
 
-/* set up social media icon size different from default image sizing */
-.social img{
-    max-width: 64px;
-    
+/* Style the tags list like buttons */
+/* Since previously you had a button, now tags are in <ul><li> */
+/* Make tags look like buttons */
+.recipe__tags {
+  list-style: none;
+  margin-bottom: 12px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
-.social{
+
+.recipe__tags li {
+  border: 2px solid black;
+  padding: 6px 12px;
+  font-size: 18px;
+  cursor: default;
+  text-transform: capitalize;
+  border-radius: 4px;
+  background-color: transparent;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.recipe__tags li:hover {
+  background-color: #ddd;
+}
+
+/* Style the title h2 (like .post h2) */
+.recipe h2 {
+  color: blue;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+}
+
+/* Style the ratings */
+.recipe__ratings {
+  font-size: 24px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.icon-star {
+  color: gold;
+  margin-right: 4px;
+}
+
+.icon-star-empty {
+  color: lightgray;
+  margin-right: 4px;
+}
+
+/* Style the description paragraph */
+.recipe__description {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+  margin-top: 12px;
+}
+
+/* Footer styles remain the same */
+footer {
+  margin-top: 100px;
+  height: 200px;
+  text-align: center;
+  
+}
+
+footer a {
+  text-decoration: none;
+  color: blue;
+}
+
+.social {
     text-align: center;
     max-width: 100%;
     margin: 28px;
+}
+
+.social img {
+    display: inline-block;
+    max-width: 64px;
+    margin: 0 4px;
 }
