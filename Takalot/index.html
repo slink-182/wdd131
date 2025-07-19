@@ -4,27 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
+    <script src="main.js" defer></script>
     <title>Takalot</title>
 </head>
 <body>
+  <!-- Theme Selector -->
+    <header id="page-header">
+        <img src="logo.png" alt="">
+        <label for="themeSelectHeader">Select Theme:</label>
+        <select id="themeSelectHeader">
+            <option value="light-theme">Light Theme</option>
+            <option value="dark-theme">Dark Theme</option>
+            <option value="blue-theme">Blue Theme</option>
+            <option value="pink-theme">Pink Theme</option>
+        </select>
+    </header>
+
+
+
     <main>
         <!-- left column -->
         <div id="left">
-            <a href="">Home</a>
-            <a href="">Explore</a>
+            <img src="logo.png" alt="logo">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
             <a href="">Notifications</a>
             <a href="">Messages</a>
+            <label for="themeSelectSidebar">Select Theme:</label>
+            <select id="themeSelectSidebar">
+                <option value="light-theme">Light Theme</option>
+                <option value="dark-theme">Dark Theme</option>
+                <option value="blue-theme">Blue Theme</option>
+                <option value="pink-theme">Pink Theme</option>
+            </select>
+
         </div>
+
         <!-- middle column -->
         <div id="middle">
-               <header><button>For You</button><button>Following</button></header>
-               <div><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dolorem ipsam error consequuntur ipsum quos laborum, distinctio modi velit aut eaque. Incidunt, eveniet. Quidem fuga, iusto ad nesciunt blanditiis dolorum?</h1></div>
-               <div class="box"></div>
+            <div class="mid-tab">
+                <a href="">For You</a>
+                <a href="">Following</a>
+            </div>
+            <!-- Post creation form -->
+            <section id="post-form-section">
+                <h2>Create a Post</h2>
+                <form id="post-form">
+                    <input type="text" id="post-title" placeholder="Post Title" required>
+                    <textarea id="post-content" placeholder="Post Content" required></textarea>
+                    <button type="submit">Post</button>
+                </form>
+            </section>
+            <!-- Dynamic posts container -->
+            <section id="posts-container">
+                <!-- Posts will be inserted here using JavaScript -->
+            </section>
         </div>
+
+
+        </div>
+
         <!-- right column -->
         <div id="right"></div>
     </main>
 
-    <footer><p>this is the footer</p></footer>
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+
+    
 </body>
 </html>

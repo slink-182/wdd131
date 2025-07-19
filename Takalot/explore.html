@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Takalot - Explore</title>
+  <link rel="stylesheet" href="home.css" />
+  <script src="main.js" defer></script>
+</head>
+<body class="light-theme">
+    <header id="page-header">
+        <label for="themeSelect">Select Theme:</label>
+        <select id="themeSelect">
+            <option value="light-theme">Light Theme</option>
+            <option value="dark-theme">Dark Theme</option>
+            <option value="blue-theme">Blue Theme</option>
+            <option value="pink-theme">Pink Theme</option>
+        </select>
+    </header>
+
+
+  <main>
+    <!-- left sidebar -->
+    <div id="left">
+        <img src="logo.png" alt="logo">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="">Notifications</a>
+        <a href="">Messages</a>
+        <label for="themeSelect">Select Theme:</label>
+        <select id="themeSelect">
+            <option value="light-theme">Light Theme</option>
+            <option value="dark-theme">Dark Theme</option>
+            <option value="blue-theme">Blue Theme</option>
+            <option value="pink-theme">Pink Theme</option>
+        </select>
+    </div>
+
+    <!-- middle content -->
+    <div id="middle">
+      <div class="mid-tab">
+        <a href="index.html">For You</a>
+        <a href="explore.html">Following</a>
+      </div>
+
+      <section id="explore-intro" style="padding: 1rem;">
+        <h2>Explore Trending Posts</h2>
+        <p>memes</p>
+        <img src="img/alcoholic.jpg" alt="People sharing ideas" width="300" />
+      </section>
+
+      <section id="posts-container">
+        <!-- Random posts inserted here by your existing JS -->
+      </section>
+    </div>
+
+    <!-- right sidebar -->
+    <div id="right"></div>
+  </main>
+
+  <footer>
+    <p>This is the footer</p>
+  </footer>
+</body>
+</html>

@@ -1,75 +1,265 @@
-*{
+/* ========== THEMES ========== */
+
+.light-theme {
+    background-color: white;
+    color: black;
+}
+.light-theme a {
+    color: black;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+.dark-theme a {
+    color: white;
+}
+
+.blue-theme {
+    background-color: #001f3f;
+    color: #7FDBFF;
+}
+.blue-theme a {
+    color: #7FDBFF;
+}
+
+.pink-theme {
+    background-color: #FF69B4;
+    color: white;
+}
+.pink-theme a {
+    color: white;
+}
+
+/* Post Form Section Styling */
+.light-theme #post-form-section,
+.light-theme #post-title,
+.light-theme #post-content,
+.light-theme #post-form button {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.dark-theme #post-form-section,
+.dark-theme #post-title,
+.dark-theme #post-content,
+.dark-theme #post-form button {
+    background-color: #222;
+    color: white;
+}
+
+.blue-theme #post-form-section,
+.blue-theme #post-title,
+.blue-theme #post-content,
+.blue-theme #post-form button {
+    background-color: #003366;
+    color: #7FDBFF;
+}
+
+.pink-theme #post-form-section,
+.pink-theme #post-title,
+.pink-theme #post-content,
+.pink-theme #post-form button {
+    background-color: #ff85c1;
+    color: white;
+}
+
+#post-form-section {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#post-title,
+#post-content,
+#post-form button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ========== BASE RESET ========== */
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    /* background-color:darkblue; */
-    background-color: black;
-    margin: 0 auto;
-    color: white;
-}
-header{
-    /* background-color: purple; */
-    border-bottom: 1px solid gray;
-    text-align: center;
 
+html, body {
+    height: 100%;
 }
-header button{
-    height: 56px;
-    width: 100px;
-    background-color: black;
-    border: 1px solid black;
-    color: white;
-    margin: 0;
-    padding: 0;
-    margin: 0 80px;
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
 }
-main{
-    /* background-color: pink; */
-    height: 100vh;
+
+a {
+    transition: color 0.3s;
+}
+
+/* ========== HEADER ========== */
+
+header img {
+    display: block;
+    margin-right: auto;
+}
+
+/* Initially hide page header */
+#page-header {
+    display: none;
+}
+
+/* ========== MAIN LAYOUT ========== */
+
+main {
+    flex: 1;
     display: grid;
-    grid-template-columns: .8fr 1.2fr 1fr;
+    grid-template-columns: 0.4fr 1fr 1fr;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
 
-/* left column elements */
-#left{
+/* ========== MID-TAB ========== */
+
+.mid-tab {
     display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 40%;
+    align-items: center;
+    justify-content: center;
+    gap: 52px;
+    border-bottom: 1px solid gray;
+    color: white;
+    height: 60px;
 }
-#left a{
-    font-size: 24px;
+
+.mid-tab a {
     text-decoration: none;
 }
 
+/* ========== COLUMNS ========== */
 
+#left {
+    display: flex;
+    flex-direction: column;
+}
 
-/* middle column elements */
-#middle{
-    /* background-color: red; */
+#left a,
+#left label,
+#left #themeSelectSidebar {
+    font-size: 24px;
+    text-decoration: none;
+    margin: 0 40px;
+}
+
+#middle {
     border-left: 1px solid gray;
     border-right: 1px solid gray;
-    padding-right:16px;
-    padding-left: 16px;
-
-}
-.box{
-    border: 2px solid green;
-    height: 50%;
-    width: 100%;
-    background-color: #111;
+    padding: 0 16px;
 }
 
-/* right column elements */
-#right{
-    /* background-color: purple; */
+#right {
+    /* reserved for future content */
 }
-footer{
+
+/* ========== POST FORM ========== */
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+}
+
+#post-title {
+    height: 24px;
+}
+
+#post-content {
+    height: 80px;
+}
+
+#post-form button {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+}
+
+/* ========== POSTS ========== */
+
+#posts-container {
+    margin: 16px 0;
+}
+
+.post {
+    padding: 12px;
+    border-bottom: 1px solid gray;
+    transition: background-color 0.3s, color 0.3s;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.post p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ========== IMAGES ========== */
+
+#middle img,
+#explore-intro img,
+#posts-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
     background-color: black;
     height: 200px;
 }
 
+/* ========== RESPONSIVE: SMALL SCREENS ========== */
+
+@media (max-width: 768px) {
+    #page-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid gray;
+        background-color: inherit;
+        color: inherit;
+        gap: 10px;
+        font-size: 1rem;
+    }
+
+    main {
+        display: block;
+    }
+
+    #left,
+    #right {
+        display: none;
+    }
+
+    #middle {
+        width: 100%;
+        padding: 10px 20px;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    /* Hide sidebar theme selector on small screens */
+    #left label,
+    #left select {
+        display: none;
+    }
+}
